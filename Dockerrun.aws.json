@@ -1,0 +1,48 @@
+{
+  "AWSEBDockerrunVersion": 2,
+  "containerDefinitions": [{
+    "name": "product",
+    "image": "tmarkel6849/reifec:product",
+    "environment": [],
+    "essential": true,
+    "memory": 128,
+    "portMappings": [{
+      "hostPort": 3001,
+      "containerPort": 3001
+    }],
+    "mountPoints": []
+  }, {
+    "name": "description",
+    "image": "tmarkel6849/reifec:description",
+    "environment": [],
+    "essential": true,
+    "memory": 128,
+    "portMappings": [{
+      "hostPort": 3003,
+      "containerPort": 3003
+    }],
+    "mountPoints": []
+  }, {
+    "name": "reviews",
+    "image": "tmarkel6849/reifec:reviews",
+    "environment": [],
+    "essential": true,
+    "memory": 128,
+    "portMappings": [{
+      "hostPort": 3002,
+      "containerPort": 3002
+    }],
+    "mountPoints": []
+  }, {
+    "name": "proxy",
+    "image": "tmarkel6849/reifec:proxy",
+    "environment": [],
+    "essential": true,
+    "memory": 512,
+    "portMappings": [{
+      "hostPort": 3333,
+      "containerPort": 3333
+    }],
+    "mountPoints": []
+  }]
+}
